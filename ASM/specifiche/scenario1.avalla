@@ -1,0 +1,41 @@
+//// starting scenario
+scenario scenario1
+load Reader.asm
+check stato = OFF;
+set input := ACCENDI;
+step
+check stato = MENU;
+check luminosita = 1;
+set input := LUMSU;
+step
+check stato = MENU;
+check luminosita = 2;
+set input := SCEGLI;
+step
+check stato = LETTURA;
+check luminosita = 2;
+set input := AGGIORNAPAG;
+step
+check stato = LETTURA;
+check luminosita = 2;
+set input := LUMGIU;
+step
+check stato = LETTURA;
+check luminosita = 1;
+set input := APRIMENU;
+step
+check stato = MENU;
+check luminosita = 1;
+set input := APRIIMPOSTAZIONI;
+step
+check stato = IMPOSTAZIONI;
+check luminosita = 1;
+set input := APRIMENU;
+step
+check stato = MENU;
+check luminosita = 1;
+set input := SPEGNI;
+step
+check stato = OFF;
+check luminosita = 0;
+step

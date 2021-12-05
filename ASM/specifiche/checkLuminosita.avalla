@@ -1,0 +1,45 @@
+//// starting scenario
+scenario checkLuminosita
+load Reader.asm
+check stato = OFF;
+set input := ACCENDI;
+step
+check stato = MENU;
+check luminosita = 1;
+set input := LUMGIU;
+step
+check stato = MENU;
+check luminosita = 0;
+set input := LUMGIU;
+step
+check stato = MENU;
+check luminosita = 0;
+set input := LUMSU;
+step
+check stato = MENU;
+check luminosita = 1;
+set input := LUMSU;
+step
+check stato = MENU;
+check luminosita = 2;
+set input := LUMSU;
+step
+check stato = MENU;
+check luminosita = 3;
+set input := LUMSU;
+step
+check stato = MENU;
+check luminosita = 4;
+set input := LUMSU;
+step
+check stato = MENU;
+check luminosita = 5;
+set input := LUMSU;
+step
+check stato = MENU;
+check luminosita = 5;
+set input := SPEGNI;
+step
+check stato = OFF;
+check luminosita = 0;
+step
